@@ -37,7 +37,7 @@ Great, now that we have our MEN app locally, let's take a few minutes to look ar
 </summary>
 <br>
 ```
-We need to install our dependencies, and configure our database locally
+We need to install our dependencies and configure our database locally
  ```
 </details>
 
@@ -49,18 +49,18 @@ To install our app's dependencies, run:
 $ npm install
 ```
 
-In another tab, let's run our mongo server
+<!-- In another tab, let's run our mongo server
 ```bash
 $ mongod
-```
+``` -->
 
-Then create our database and seed it locally:
+Then, create our database and seed it locally:
 
 ```bash
 $ node db/seed.js
 ```
 
-Now lets start our server and make sure everything works
+Now lets start our server and make sure everything works:
 
 ```bash
 $ nodemon
@@ -91,7 +91,7 @@ angular
   ])
 ```
 
-As well as are currently loading in Angular and its sub packages in `views/candidates.hbs`
+As well as loading in Angular and its sub packages in `views/candidates.hbs`
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
@@ -125,7 +125,7 @@ data-ng-app is a directive that initializes our angular-app
 </summary>
 <br>
 ```
-data-ui-view is the placeholder for where all of our angular rendered html templates will go
+data-ui-view is the placeholder where all of our angular rendered html templates will go
  ```
  <br>
  <br>
@@ -235,7 +235,7 @@ app.use("/assets", express.static("public"));
 
 ---
 
-## Break (10 mins)
+## Break
 
 ---
 
@@ -243,7 +243,7 @@ app.use("/assets", express.static("public"));
 
 Alright, let's review a little bit about what we want to accomplish when building out the Angular side of our application.  
 
-So far, we still are using express to serve at least one server-side rendered view, that loads and initializes our Angular app. From there, Angular takes over the view templating and routing throughout our SPA. Also, eventually we want our front-end to be able to sync with our back-end in order to persist data throughout our app.
+So far, we are still using express to serve at least one server-side rendered view that loads and initializes our Angular app. From there, Angular takes over the view templating and routing throughout our SPA. Also, eventually we want our front-end to be able to sync with our back-end in order to persist data throughout our app.
 
 > How can we do this?
 
@@ -272,7 +272,7 @@ Why might it be a good idea to namespace our back-end routes under `api`?
 </summary>
 <br>
 ```
-To avoid confusion between routes meant to serve html, and routes whose purpose it is to render our app's data as JSON
+To avoid confusion between routes meant to serve html and routes whose purpose it is to render our app's data as JSON
 ```
 <br>
 <br>
@@ -285,7 +285,7 @@ What is the significance of the response for our `delete` request?
 </summary>
 <br>
 ```
-To provide a clue to the client that the request went through, and the delete was processed
+To provide a clue to the client that the request went through and the delete was processed
 ```
 <br>
 <br>
@@ -332,7 +332,7 @@ A factory for candidates
 </details>
 
 <br>
-Go ahead and follow the outlined steps to add our app's Index functionality for candidates:
+Go ahead and follow the outlined steps to add our app's Index functionality for candidates
 
 **Steps**:
 
@@ -381,13 +381,13 @@ Finally, we can delete our `views/candidates-show.hbs` file since Angular will b
 
 ### [Adds Create Functionality](https://github.com/ga-wdi-exercises/whenpresident/commit/e787c60a8d349a09d94447e42deedf0fa64f4196)
 
-Let's continue building out CRUD functionality, by adding the ability to create a new Candidate...
+Let's continue building out CRUD functionality, by adding the ability to create a new Candidate.
 
 **Steps**:
 
-- Update a the `index` view to include a form to create a new candidate
-- Update the index controller to add a definition for our `create` method
-  - It should persist the new candidate to the database
+- Update the `index` view to include a form to create a new candidate
+- Update the index controller to add a definition for our `create` method. It should:
+  - Persist the new candidate to the database
   - Take the user to the new candidate's show page after it is saved
 - Update the create route in `index.js` to pass in `req.body` not `req.body.candidate`
 - Change our app's body-parser configuration to use JSON
@@ -399,7 +399,7 @@ In `public/js/ng-views/index.html`: We need to add some UI
 In `public/js/app.js`: We need to update the index controller to add a definition for our `create` method
 ![Adds Create Route2](./images/create-ctrl.png)
 
-Finally, we need to update the route in `index.js`:
+Finally, we need to update the route in `index.js`
 ![Adds Create Route3](./images/create-server.png)
 
 ---
@@ -419,7 +419,7 @@ Moving onto the U in CRUD, let's build out our app's update functionality.
 </summary>
 <br>
 ```
-Body-Parser is necessary middleware that allows us to access the body of post requests from ajax requests and html form submissions. In our app, we use to parse the request's body as JSON.
+Body-Parser is necessary middleware that allows us to access the body of post requests from ajax requests and html form submissions. In our app, we use it to parse the request's body as JSON.
  ```
  <br>
  <br>
@@ -450,9 +450,9 @@ As we put some of the finishing touches on our app, let's add the functionality 
 
 **Steps**:
 
-- Modify the "concede" button in `show.html` to run an `update` method on click
-- Define an `update` method in your `showCtrl` in `app.js`
-- Pass in `$state` to your show controller than use it to redirect the user to the index root after deletion
+- Modify the "concede" button in `show.html` to run a `delete` method on click
+- Define a `delete` method in your `showCtrl` in `app.js`
+- Pass in `$state` to your show controller then use it to redirect the user to the index root after deletion
 
 <!-- Delete Commit Diff -->
 <details>
@@ -469,7 +469,7 @@ As we put some of the finishing touches on our app, let's add the functionality 
 
 Great, now we have completed full CRUD for `candidates` in our MEAN app.
 
-**If we have time**, we have a few more steps to build out the rest of our app's desired features:
+**If we have time**, we have a few more steps to build out the rest of our app's desired features
 
 ---
 
@@ -489,7 +489,7 @@ Next up, we need to configure our app to be a true HTML5 SPA. Part of this proce
 </summary>
 <br>
 ```
-We add the wildcard to our route, the `*`, so that all combinations of routes hit via the url manually will trigger our Angular SPA and allow us to use Angular's `html5Mode` to take over routing
+We add the wildcard to our route, the `*`, so that all combinations of routes that hit the url manually will trigger our Angular SPA and allow us to use Angular's `html5Mode` to take over routing
 ```
 <br>
 <br>
@@ -524,7 +524,7 @@ In `views/layout-main.hbs`: add our app's base ref
 
 ### [Adds Redirect to Root Route](https://github.com/ga-wdi-exercises/whenpresident/commit/f1d4585aa70a0ee76ec7b4f960123f3aac0fd476)
 
-Continuing with the work with our app's routes, we need a way to redirect any request not defined in our app's states to a default state
+Continuing with the work with our app's routes, we need a way to redirect any request not defined in our app's states to a default state.
 
 **Questions**:
 
