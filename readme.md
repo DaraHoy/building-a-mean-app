@@ -7,7 +7,7 @@
 ## Learning Objectives
 
 - Identify how different components of a MEAN app work together
-- Build a simple MEAN app with data persistence, and dynamic views  
+- Build a simple MEAN app with data persistence and dynamic views  
 - Provide an example of a MEAN app
 - Explain when to choose the MEAN stack
 
@@ -19,7 +19,7 @@ So far we've studied Express, Mongo, Mongoose, and Angular in isolation, as well
 
 Today we'll be expanding on these subjects and learn how they fit together by building a MEAN stack app.
 
-The term MEAN was coined by a developer at Mongo in a [blog post](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-andMEAN) discussing his team's workflow. His insights are as follows:
+The term MEAN was coined by a developer at Mongo in a [blog post](https://www.mongodb.com/blog/post/the-mean-stack-mongodb-expressjs-angularjs-and) discussing his team's workflow. His insights are as follows:
 
 > "By coding with Javascript throughout, we are able to realize performance gains in both the software itself and in the productivity of our developers...With MongoDB, we can store our documents in a JSON-­like format, write JSON queries on our ExpressJS and NodeJS based server, and seamlessly pass JSON documents to our AngularJS front-end."
 
@@ -38,7 +38,7 @@ Let's review the use cases for each component:
 </summary>
 <br>
 ```
-Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web apps. Express works with a myriad of HTTP utility methods and middleware that allows developers to create robust APIs quickly and easily
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web apps. Express works with a myriad of HTTP utility methods and middleware that allows developers to create robust APIs quickly and easily.
  ```
  <br>
  <br>
@@ -51,7 +51,7 @@ Express is a minimal and flexible Node.js web application framework that provide
 </summary>
 <br>
 ```
-MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling
+MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling.
  ```
  <br>
  <br>
@@ -64,7 +64,7 @@ MongoDB is an open-source document database that provides high performance, high
 </summary>
 <br>
 ```
-Like ActiveRecord for Rails, Mongoose is an ORM used to represent data from a Mongo database as models in a Javascript back-end. This makes performing CRUD actions to collections and documents in our DB easier.
+Like ActiveRecord for Rails, Mongoose is an object mapping tool used to represent data from a Mongo database as models in a Javascript back-end. This makes performing CRUD actions to collections and documents in our DB easier.
  ```
  <br>
  <br>
@@ -77,7 +77,7 @@ Like ActiveRecord for Rails, Mongoose is an ORM used to represent data from a Mo
 </summary>
 <br>
 ```
-AngularJS is a robust front-end framework that makes it possible to easily and quickly build Single Page Applications. It has lots of functionality built in for rendering data, and swapping views in and out to give the impression of having multiple pages. It is fully extensible and works well with other libraries.
+Angular is a robust front-end framework that makes it possible to easily and quickly build Single Page Applications. It has lots of functionality built in for rendering data, and swapping views in and out to give the impression of having multiple pages. It is fully extensible and works well with other libraries.
  ```
  <br>
  <br>
@@ -109,16 +109,10 @@ Today we are going to walkthrough adding Angular to [whenpresident](https://gith
 
 ---
 
-## What’s Next
-
-- [Deploying a MEAN App](https://github.com/ga-wdi-lessons/deploy-MEAN-app)
-
----
-
-## Quiz Questions
+## Review Questions
 
 - What advantages does the MEAN stack offer?
-- When type of applications are best suited for the MEAN stack?
+- What type of applications are best suited for the MEAN stack?
 - What is HTML5 Mode and how does it affect our angular apps?
 - What is the role of `body-parser` in the request-response cycle?
 
