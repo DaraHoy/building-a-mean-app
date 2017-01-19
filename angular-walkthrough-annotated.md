@@ -99,7 +99,7 @@ As well as loading in Angular and its sub packages in `views/candidates.hbs`
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
 <script src="/assets/js/app.js"></script>
 
-<div data-ng-app="candidates">
+<div data-ng-app="whenPresident">
   <main data-ui-view></main>
 </div>
 ```
